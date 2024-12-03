@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #87CEEB;
+    color: #1C3A57;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.NavBar {
+ 
+    background-color: #ff8800;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 1em; 
+    gap: 2em; 
+    flex-wrap: wrap; 
+}
+
+.NavBar li {
+    list-style-type: none;
+    font-size: 1.5em;
+}
+
+.NavBar a:hover {
+    color: #1C3A57; 
+}
+.NavBar li input{
+
+    width: 50%;
+    
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 90vh;
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.Welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.Welcome h1 {
+    font-size: 3em;
+    z-index: 1;
+    
+}

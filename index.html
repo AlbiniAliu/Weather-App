@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather app</title>
+</head>
+<body>
+<ul class="NavBar">
+    <a href="index.html"> <li>Home</li></a>
+    <li>Forecast</li>
+    
+   
+
+    
+</ul>
+
+<div class="Welcome">
+    <video src="images/HeaderVideo.mp4" autoplay muted playsinline loop></video>
+    <h1>Welcome to My Weather App</h1>
+</div>
+<input type="text" id="search" placeholder="Search City">
+<select id="unit-select">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+</select>
+
+<div id="weather-info">
+    <h2 id="city-name"></h2>
+    <p id="weather-description"></p>
+    <p id="temperature"></p>
+    <p id="humidity"></p>
+    <p id="wind-speed"></p>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
