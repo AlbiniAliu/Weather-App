@@ -20,21 +20,39 @@
     <video src="images/HeaderVideo.mp4" autoplay muted playsinline loop></video>
     <h1>Welcome to My Weather App</h1>
 </div>
+
+<div id="bloku">
 <input type="text" id="search" placeholder="Search City">
-<select id="unit-select">
+<select id="unit">
     <option value="celsius">Celsius</option>
     <option value="fahrenheit">Fahrenheit</option>
 </select>
+<button onclick="WeatherReport()">Search your city</button>
 
-<div id="weather-info">
-    <h2 id="city-name"></h2>
-    <p id="weather-description"></p>
-    <p id="temperature"></p>
-    <p id="humidity"></p>
-    <p id="wind-speed"></p>
+
+<div id="weather">
+    <h2>Your City: <span id="City"></span></h2>
+    <h2>The weather: <span id="Description"></span></h2>
+    <h2>Temperature in your area: <span id="Temp"></span></h2>
+    <h2>Humidity <span id="Humidity"></span></h2>
+    <h2>Wind Speed <span id="Wind"></span></h2>
+
 </div>
-
-
+</div>
+<footer>
+    <div id="left">
+        <h1>Contact info</h1>
+        <a href="https://www.instagram.com/albin_aliiu/" target="_blank"><img src="images/facebook.png" alt="facebook icon">Follow me on Facebook</a>
+        <a href="https://www.facebook.com/albinnaliiu" target="_blank"><img src="images/instagram.svg" alt="instagra icon">Follow me on Instagram</a>
+        <a href="https://github.com/AlbiniAliu" target="_blank"><img src="images/git.png" alt="Githubs icon">Follow me on GitHub</a>
+    </div>
+    <div id="center">
+        <h1>&copy All right Reseverd Albin Aliu</h1>
+    </div>
+    <div id="right">
+        Powered by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a>
+    </div>
+</footer>
 <script src="index.js"></script>
 </body>
 </html>

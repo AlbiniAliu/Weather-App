@@ -1,34 +1,39 @@
-const apiKey = '248e37aa37b233cb84793897a8ec1b39'; 
+const apiKey = '248e37aa37b233cb84793897a8ec1b39';
+const search = document.getElementById("search");
+const unit = document.getElementById("unit");
+const cityElement = document.getElementById("City");
+const desc = document.getElementById("Description");
+const temp = document.getElementById("Temp");
+const hum = document.getElementById("Humidity");
+const wind = document.getElementById("Wind");
 
-const searchInput = document.getElementById('search');
-const unitSelect = document.getElementById('unit-select');
-const cityName = document.getElementById('city-name');
-const weatherDescription = document.getElementById('weather-description');
-const temperature = document.getElementById('temperature');
-const humidity = document.getElementById('humidity');
-const windSpeed = document.getElementById('wind-speed');
-const weatherInfo = document.getElementById('weather-info');
+function WeatherReport() {
+    const searchedCity = search.value.trim();
+    const selectedUnit = unit.value;
 
-searchInput.addEventListener('input', () => {
-    const city = searchInput.value;
-    const unit = unitSelect.value;
+    if (searchedCity === '') {
+        alert("Please enter a city name!");
+        return;
+    }
 
-    if (city.trim() === '') return;
+    const units = selectedUnit === 'celsius' ? 'metric' : 'imperial';
 
-    weatherInfo.textContent = 'Loading...';
-
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&appid=${apiKey}&units=${units}`)
         .then(response => response.json())
         .then(data => {
-            cityName.textContent = data.name;
-            weatherDescription.textContent = data.weather[0].description;
-            temperature.textContent = `Temperature: ${data.main.temp}°${unit.toUpperCase()}`;
-            humidity.textContent = `Humidity: ${data.main.humidity}%`;
-            windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
-            weatherInfo.textContent = '';
+            if (data.cod !== 200) {
+                alert("City not found!");
+                return;
+            }
+
+            cityElement.innerText = data.name;
+            desc.innerText = data.weather[0].description;
+            temp.innerText = `${data.main.temp}°${selectedUnit === 'celsius' ? 'C' : 'F'}`;
+            hum.innerText = ` ${data.main.humidity}%`;
+            wind.innerText = ` ${data.wind.speed} m/s`;
         })
         .catch(error => {
-            console.error(error);
-            weatherInfo.textContent = 'Error fetching weather data. Please try again.';
+            console.error("Error fetching weather data:", error);
+            alert("An error occurred while fetching the data. Please try again.");
         });
-});
+}
