@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #87CEEB; */
+    /* background-color: #D3D3D3; */
+    background-color: #747494;
+
+    
+    /* color: #1C3A57; */
+    color:#333333;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.NavBar {
+ 
+    /* background-color: #ff8800; */
+    
+    background-color: #747494;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 1em; 
+    gap: 2em; 
+    flex-wrap: wrap; 
+}
+
+.NavBar li {
+    list-style-type: none;
+    font-size: 1.5em;
+}
+
+.NavBar a:hover {
+    color: #1C3A57; 
+}
+.NavBar li input{
+
+    width: 50%;
+    
+}
+
+#bloku{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 60%;
+    margin-bottom: 10%;
+    background: rgba(92, 26, 26, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    top: 40%;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+    
+    
+    
+  
+}
+
+input[type="text"], select, button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weather {
+    margin-top: 20px;
+    color: white;
+}
+
+#weather h2 {
+    font-size: 18px;
+}
+#FiveDays {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.forecast-day img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+.forecast-day h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.forecast-day p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(#6DD5FA, #FFFFFF);
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#left img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#left a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+#left a:hover {
+    color: #007BFF;
+}
+
+#attribution {
+    position: relative;
+    font-size: 14px;
+    color: #555;
+}
+
+#attribution a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#attribution a:hover {
+    color: #0056b3;
+}
+

@@ -25,12 +25,16 @@ function WeatherReport() {
                 alert("City not found!");
                 return;
             }
+            const iconCode = data.weather[0].icon; // Weather icon code
+            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            document.getElementById("weather-icon").src = iconUrl;
 
             cityElement.innerText = data.name;
             desc.innerText = data.weather[0].description;
             temp.innerText = `${data.main.temp}°${selectedUnit === 'celsius' ? 'C' : 'F'}`;
             hum.innerText = ` ${data.main.humidity}%`;
-            wind.innerText = ` ${data.wind.speed} m/s`;
+            wind.innerText = `   ${data.wind.speed} m/s`;
+            
         })
         .catch(error => {
             console.error("Error fetching weather data:", error);

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forecast.css">
+    <title>5-Day Weather Forecast</title>
+</head>
+<body>
+<ul class="NavBar">
+    <a href="index.html"><li>Home</li></a>
+    <a href="forecast.html"><li>Five Day Forecast</li></a>
+</ul>
+
+<div id="bloku">
+    <input type="text" id="search" placeholder="Search City">
+    <select id="unit">
+        <option value="metric">Celsius</option>
+        <option value="imperial">Fahrenheit</option>
+    </select>
+    <button onclick="fetchFiveDayForecast()">Search your city</button>
+</div>
+
+<div id="FiveDays"></div>
+
+<footer>
+    <div id="left">
+        <h1>Contact info</h1>
+        <a href="https://www.instagram.com/albin_aliiu/" target="_blank"><img src="images/facebook.png" alt="Facebook icon">Follow me on Facebook</a>
+        <a href="https://www.facebook.com/albinnaliiu" target="_blank"><img src="images/instagram.svg" alt="Instagram icon">Follow me on Instagram</a>
+        <a href="https://github.com/AlbiniAliu" target="_blank"><img src="images/git.png" alt="GitHub icon">Follow me on GitHub</a>
+    </div>
+    <div id="center">
+        <h1>&copy; All rights reserved Albin Aliu</h1>
+    </div>
+    <div id="right">
+        Powered by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a>
+    </div>
+</footer>
+<script src="forecast.js"></script>
+</body>
+</html>

@@ -9,11 +9,8 @@
 <body>
 <ul class="NavBar">
     <a href="index.html"> <li>Home</li></a>
-    <li>Forecast</li>
-    
-   
+    <a href="forecast.html"><li>Five Day Forecast</li></a>
 
-    
 </ul>
 
 <div class="Welcome">
@@ -22,6 +19,7 @@
 </div>
 
 <div id="bloku">
+    <h1>Get the current weather for your city:</h1>
 <input type="text" id="search" placeholder="Search City">
 <select id="unit">
     <option value="celsius">Celsius</option>
@@ -31,6 +29,8 @@
 
 
 <div id="weather">
+    <img id="weather-icon" src="" alt="Weather Icon">
+
     <h2>Your City: <span id="City"></span></h2>
     <h2>The weather: <span id="Description"></span></h2>
     <h2>Temperature in your area: <span id="Temp"></span></h2>
@@ -48,6 +48,7 @@
     </div>
     <div id="center">
         <h1>&copy All right Reseverd Albin Aliu</h1>
+        
     </div>
     <div id="right">
         Powered by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a>
